@@ -1,0 +1,12 @@
+
+# To create a topic 
+.\bin\windows\kafka-topics.bat --create --topic stock-data --bootstrap-server localhost:9092
+
+# To read the events
+.\bin\windows\kafka-console-consumer.bat --topic stock-data --from-beginning --bootstrap-server localhost:9092
+
+# To Start ZooKeeper
+.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+
+# To Start Kafka 
+.\bin\windows\kafka-server-start.bat .\config\server.properties
